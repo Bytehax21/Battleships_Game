@@ -6,7 +6,7 @@ const startButton = document.querySelector("#start-btn");
 const infoDisplay = document.querySelector("#info");
 const turnDisplay = document.querySelector("#turn-display");
 const hitSound = new Audio('Sound/counter-strike-c4-sound-edited.mp3')
-const misSound = new Audio('Sound/.mp3')
+const misSound = new Audio('Sound/water-splash.mp3')
 
 let angle = 0;
 function flip() {
@@ -220,7 +220,7 @@ function handleClick(e){
             infoDisplay.textContent = "Nothing Got Hit"
             e.target.classList.add('empty')
             misSound.currentTime = 0;
-            misSound.play()
+            misSound.play() 
         }
         playerTurn = false;
         const allBoardBlocks = document.querySelectorAll('#computer div')
