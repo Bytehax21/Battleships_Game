@@ -175,14 +175,18 @@ border-radius: 10px;
 #computer .cruiser,
 #computer .battleship,
 #computer .carrier {
-    background-color: transparent !important;
+    background-color: transparent;
   border-radius: 0 !important;
   box-shadow: none !important;
     
     
 }
+#computer .block.boom {
+  background-color: red !important;
+}
+
 .boom {
-    background-color: red !important;
+    background-color: red;
 }
 .empty{
     background-color: #a0c4ff !important;
