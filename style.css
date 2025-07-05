@@ -1,29 +1,63 @@
+body{
+  /* margin: auto; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.main-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game-info {
+  width: 900px;
+  margin: 20px auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 #gamesboard-container {
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
+    width: 900px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; 
+    /* background-color: hsl(200, 100%, 50%) !important; */
 }
 
 .game-board{
-    width: 200px;
-    height: 200px;
     display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
 }
 
 .block{
-    width: 20px;
-    height: 20px;
+     width: 40px;
+  height: 40px;
+  border: 1px solid hsla(0, 0%, 100%, .2);
     /* box-sizing: border-box;
     border: 1px solid black; */
 }
 
+
+.option-container > .shipz{
+  /* border-radius: 25px; */
+  
+
+}
+
 .option-container {
-  width: 500px;
-  height: 50px;
+  width: 900px;
+  height: 80px;
   background-color: yellow;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 30px 0;
 
 }
@@ -44,28 +78,28 @@
 }
 
 .destroyer-preview {
-width: 20px;
-height: 10px;
+width: 40px;
+height: 20px;
 margin: 3px;
 }
 .submarine-preview {
-width: 30px;
-height: 10px;
+width: 50px;
+height: 20px;
 margin: 3px;
 }
 .cruiser-preview {
-width: 30px;
-height: 10px;
+width: 50px;
+height: 20px;
 margin: 3px;
 }
 .battleship-preview {
-width: 40px;
-height: 10px;
+width: 60px;
+height: 20px;
 margin: 3px;
 }
 .carrier-preview {
-width: 50px;
-height: 10px;
+width: 70px;
+height: 20px;
 margin: 3px;
 }   
 
@@ -86,3 +120,4 @@ margin: 3px;
 .empty{
     background-color: #a0c4ff !important;
 }
+
