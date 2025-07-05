@@ -103,10 +103,25 @@ function addShipPiece(user, ship, startId) {
 
     if (valid && notTaken){
 
-    shipBlocks.forEach(shipBlock => {
-        shipBlock.classList.add(ship.name)
-        shipBlock.classList.add('taken')
-    })
+    shipBlocks.forEach((shipBlock, index) => {
+  shipBlock.classList.add(ship.name);
+  shipBlock.classList.add('taken');
+
+
+  if (isHorizontal) {
+    if (index === 0) {
+      shipBlock.classList.add('ship-start-horizontal');
+    } else if (index === shipBlocks.length - 1) {
+      shipBlock.classList.add('ship-end-horizontal');
+    }
+  } else {
+    if (index === 0) {
+      shipBlock.classList.add('ship-start-vertical');
+    } else if (index === shipBlocks.length - 1) {
+      shipBlock.classList.add('ship-end-vertical');
+    }
+  }
+});
 }   else{
         if (user === 'computer') addShipPiece(user,ship, startId)
         if (user === 'player') notDropped = true;

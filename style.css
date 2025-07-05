@@ -14,11 +14,28 @@ body{
 }
 
 #game-info {
-  width: 900px;
-  margin: 20px auto;
-  font-size: 20px;
+   font-family: 'Orbitron', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d2d2d;
   display: flex;
   justify-content: space-between;
+  width: 900px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+
+
+   /* font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #111;
+  color: #0ff; /* neon blue */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff; 
 }
 
 #gamesboard-container {
@@ -37,19 +54,52 @@ body{
 }
 
 .block{
-     width: 40px;
+  width: 40px;
   height: 40px;
   border: 1px solid hsla(0, 0%, 100%, .2);
     /* box-sizing: border-box;
     border: 1px solid black; */
 }
 
-
-.option-container > .shipz{
-  /* border-radius: 25px; */
+.taken,
+.shipz{
+  background-color: hsl(0, 0%, 80%);
   
-
 }
+.destroyer {
+  background-color: #6d6875;
+}
+.submarine {
+  background-color: #4d908e;
+}
+.cruiser {
+  background-color: #577590;
+}
+.battleship {
+  background-color: #277da1;
+}
+.carrier {
+  background-color: #f3722c;
+}
+
+
+.shipz > div{
+  width: 40px;
+  height: 40px;
+}
+.shipz{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1vmin;
+ 
+  /* border-radius: 6px; */
+}
+
+/* .option-container > .shipz{
+  border-radius: 25px;
+
+
+} */
 
 .option-container {
   width: 900px;
@@ -61,46 +111,59 @@ body{
   margin: 30px 0;
 
 }
-.destroyer {
-  background-color: brown;
+
+.ship-start-horizontal {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
 }
-.submarine {
-  background-color: green;
+
+.ship-end-horizontal {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
- .cruiser {
-  background-color: purple;
+
+.ship-start-vertical {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
-.battleship {
-  background-color: orange;
+
+.ship-end-vertical {
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
-.carrier {
-  background-color: blue;
-}
+
+
 
 .destroyer-preview {
 width: 40px;
 height: 20px;
 margin: 3px;
+border-radius: 10px;
+
 }
 .submarine-preview {
 width: 50px;
 height: 20px;
 margin: 3px;
+border-radius: 10px;
 }
 .cruiser-preview {
 width: 50px;
 height: 20px;
 margin: 3px;
+border-radius: 10px;
 }
 .battleship-preview {
 width: 60px;
 height: 20px;
 margin: 3px;
+border-radius: 10px;
 }
 .carrier-preview {
 width: 70px;
 height: 20px;
 margin: 3px;
+border-radius: 10px;
 }   
 
 .hover{
@@ -112,7 +175,11 @@ margin: 3px;
 #computer .cruiser,
 #computer .battleship,
 #computer .carrier {
-    background-color: transparent;
+    background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+    
+    
 }
 .boom {
     background-color: red !important;
@@ -121,3 +188,26 @@ margin: 3px;
     background-color: #a0c4ff !important;
 }
 
+
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  background-color: #0077b6; /* deep blue */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #0096c7;
+}
+
+button:active {
+  transform: scale(0.96);
+  background-color: #023e8a;
+}
